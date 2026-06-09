@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtReviewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lê Trung Khánh"
+                android:textStyle="bold"
+                android:textColor="#1E293B"
+                android:textSize="14sp"/>
+
+            <RatingBar
+                android:id="@+id/reviewRatingIndicator"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:progressTint="#FACC15"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtReviewComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sân đẹp, đèn sáng, chủ cụm sân nhiệt tình!"
+            android:textColor="#475569"
+            android:textSize="13sp"
+            android:layout_marginTop="6dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

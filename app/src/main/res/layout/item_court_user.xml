@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/btnBookCourtNow"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/txtCourtNameUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sân số 1"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#01432A" /> <TextView
+            android:id="@+id/txtCourtTypeUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loại sân: 5 người"
+            android:textSize="13sp"
+            android:textColor="#64748B"
+            android:layout_marginTop="4dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:id="@+id/txtCourtPriceUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200,000 đ"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#B45309" /> <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" / trận"
+                android:textSize="13sp"
+                android:textColor="#94A3B8" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnBookCourtNow"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:text="ĐẶT LỊCH"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#01432A"
+            android:backgroundTint="#EAB308" android:textSize="13sp"
+            android:paddingHorizontal="20dp"
+            app:cornerRadius="22dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

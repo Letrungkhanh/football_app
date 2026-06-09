@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_stadium"
+        android:title="Quản lý Cụm Sân Lớn" />
+    <item
+        android:id="@+id/nav_court"
+        android:title="Quản lý Sân Nhỏ" />
+    <item
+        android:id="@+id/nav_booking"
+        android:title="Quản lý Đơn Đặt" />
+    <item
+        android:id="@+id/nav_users"
+        android:title="Quản lý Người Dùng" />
+    <item
+        android:id="@+id/nav_manage_reviews"
+        android:title="Quản lý Đánh giá" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Đăng xuất" />
+
+</menu>

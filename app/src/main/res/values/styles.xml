@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="labelStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="inputStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:background">@android:drawable/edit_text</item>
+    </style>
+</resources>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,10 +15,28 @@
         android:theme="@style/Theme.Football"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".BookingActivity"
+            android:name=".activities.admin.StadiumRevenueDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.admin.ManageRevenueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.BookingHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.owner.OwnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +45,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activities.user.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.user.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.UserSelectCourtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.user.BookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageStadiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.AddEditStadiumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageCourtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.AddEditCourtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageBookingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.admin.ManageUsersActivity"
             android:exported="false" />
     </application>
 

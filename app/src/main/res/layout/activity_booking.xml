@@ -1,24 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp">
+    android:background="#01432A"
+    tools:ignore="HardcodedText">
 
-    <TextView
-        android:id="@+id/fieldNameTextView"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBooking"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01432A"
+        app:title="Đặt lịch ngày trực quan"
+        app:titleTextColor="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutBottomButton"
+        android:layout_below="@id/toolbarBooking"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#025938"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🗺️ Thông tin sân"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#FACC15" /> <TextView
+                    android:id="@+id/txtBookingCourtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tên sân bóng"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp"/>
+
+                    <TextView
+                        android:id="@+id/txtBookingCourtPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Giá: 0 đ"
+                        android:textSize="14sp"
+                        android:textColor="#E2E8F0"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏳ Thông tin lịch đặt"
+                android:textStyle="bold"
+                android:textColor="#FACC15"
+                android:textSize="15sp"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnSelectDate"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="📅 Bấm để chọn ngày đá"
+                android:textAllCaps="false"
+                android:textColor="#01432A"
+                android:textSize="15sp"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginBottom="12dp"
+                app:cornerRadius="10dp"
+                android:textStyle="bold"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTimeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🥤 Dịch vụ đi kèm (Tùy chọn)"
+                android:textStyle="bold"
+                android:textColor="#FACC15"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical">
+
+                        <CheckBox
+                            android:id="@+id/chkServiceWater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nước suối Aquafina (10k)"
+                            android:textColor="#01432A"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:buttonTint="#EAB308" /> <EditText
+                        android:id="@+id/edtQuantityWater"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:inputType="number"
+                        android:text="1"
+                        android:gravity="center"
+                        android:background="@android:drawable/editbox_background_normal"
+                        android:backgroundTint="#FACC15" android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#01432A"
+                        android:importantForAutofill="no"
+                        android:visibility="gone"
+                        tools:ignore="LabelFor,TextFields" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="2dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="16dp"
+                        android:gravity="center_vertical">
+
+                        <CheckBox
+                            android:id="@+id/chkServiceSting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tăng lực Sting (12k)"
+                            android:textColor="#01432A"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:buttonTint="#EAB308" />
+
+                        <EditText
+                            android:id="@+id/edtQuantitySting"
+                            android:layout_width="65dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:inputType="number"
+                            android:text="1"
+                            android:gravity="center"
+                            android:background="@android:drawable/editbox_background_normal"
+                            android:backgroundTint="#FACC15"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#01432A"
+                            android:importantForAutofill="no"
+                            android:visibility="gone"
+                            tools:ignore="LabelFor,TextFields" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 SỐ ĐIỆN THOẠI LIÊN HỆ"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <EditText
+                android:id="@+id/edtUserPhoneBooking"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:hint="Nhập số điện thoại nhận sân"
+                android:inputType="phone"
+                android:paddingHorizontal="16dp"
+                android:textColor="#01432A"
+                android:textColorHint="#94A3B8"
+                android:textSize="15sp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:importantForAutofill="no"
+                tools:ignore="TextFields" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardOwnerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👤 Thông tin chủ sân"
+                        android:textStyle="bold"
+                        android:textColor="#01432A"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtOwnerNameBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tên: Đang tải..."
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:id="@+id/txtOwnerPhoneBooking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SĐT: Đang tải..."
+                        android:textColor="#01432A"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tên sân"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:layout_alignParentBottom="true"
+        android:background="#01432A"
+        android:padding="16dp"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/fieldPriceTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Giá sân"
-        android:textSize="18sp" />
+        <Button
+            android:id="@+id/btnConfirmBookingUser"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="XÁC NHẬN &amp; TIẾP THEO"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#01432A"
+            android:backgroundTint="#EAB308"
+            app:cornerRadius="12dp" />
+    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

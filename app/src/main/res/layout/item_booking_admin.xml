@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/txtRowStt"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#1E293B"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="4dp">
+
+        <TextView
+            android:id="@+id/txtBookingCourtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sân số 1 - Đại học Vinh"
+            android:textColor="#0F172A"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/txtBookingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 18/05/2026 | ⏰ 17:00 - 18:30"
+            android:textColor="#475569"
+            android:textSize="13sp"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/txtBookingPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📞 SĐT: 0987654321"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtAdminBookingServices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🥤 Dịch vụ: Nước suối x5"
+            android:textColor="#2563EB"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:id="@+id/txtBookingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="300,000 đ"
+            android:textColor="#22C55E"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/txtBookingStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chờ duyệt"
+            android:textColor="#F59E0B"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btnRowAction"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:padding="6dp"
+        android:src="@android:drawable/checkbox_on_background"
+        app:tint="#EA580C"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</LinearLayout>
